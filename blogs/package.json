@@ -1,0 +1,25 @@
+{
+  "name": "blogs",
+  "version": "1.0.0",
+  "description": "blog api",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iamsbharti/node-test.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "Saurabh Bharti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iamsbharti/node-test/issues"
+  },
+  "homepage": "https://github.com/Iamsbharti/node-test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
