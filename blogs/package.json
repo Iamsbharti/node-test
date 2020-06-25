@@ -4,6 +4,7 @@
   "description": "blog api",
   "main": "index.js",
   "scripts": {
+    "start": "node server",
     "test": "npm test"
   },
   "repository": {
