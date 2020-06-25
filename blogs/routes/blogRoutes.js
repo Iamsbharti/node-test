@@ -1,7 +1,11 @@
-const blogControllers = require("../controllers/blogControllers");
+const express = require("express");
+const createBlog = require("../controllers/blogControllers");
 //routes
-export async function createBlogRoute(app) {
+function createBlogRoute(app) {
   console.log("create Blog route");
   const { req, res } = app;
-  app.get("/createBlog", blogControllers.createBlog(req, res));
+  app.get("/createBlog", createBlog.createBlog(req, res));
 }
+module.exports = {
+  createBlogRoute: createBlogRoute,
+};
