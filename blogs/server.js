@@ -1,6 +1,6 @@
 const express = require("express");
 const router = require("./routes/blogRoutes");
-const port = 3000;
+//const port = 3000;
 const app = express();
 app.get("/", (req, res) => {
   res.send("welcome to blog API!!!");
@@ -8,4 +8,6 @@ app.get("/", (req, res) => {
 
 //add middleware
 app.use("/blog", router);
-app.listen(port, () => console.log(`server started listining at-${port}`));
+app.listen(process.env.SERVER_PORT, () =>
+  console.log(`server started listining at-${process.env.SERVER_PORT}`)
+);
