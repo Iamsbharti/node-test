@@ -47,3 +47,17 @@ fs.readdir("../tests", (error, dir) => {
   }
 });
 console.log(Math.random());
+
+/**Write to file sync */
+console.log("Write to file sync");
+let contentSync = "Hi there --keep going you can do it,you will have to do it";
+fs.writeFileSync("testFileWrite.txt", contentSync);
+console.log("Writing file finished");
+
+/**write to file async */
+console.log("Write to file async");
+let contentAsync = "I have overwritten the file contents";
+fs.writeFile("testFileWrite.txt", contentAsync, () => {
+  console.log("File async write done");
+});
+console.log("OPs", Math.random() * 1000);
