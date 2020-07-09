@@ -32,5 +32,18 @@ fs.readFile("test.py", "utf-8", (error, file) => {
 console.log("Random ops", Math.random());
 
 /**Read Directory sync */
+console.log("Read Directory sync");
 let dirReaderSync = fs.readdirSync("../tests");
 console.log("dir", dirReaderSync);
+
+/**Read Directory async */
+console.log("Read Directory Async");
+fs.readdir("../tests", (error, dir) => {
+  if (error) {
+    console.log("Error reading directory", error.message);
+  } else {
+    console.log("Direcory", dir);
+    console.log("Directory Read ops done");
+  }
+});
+console.log(Math.random());
